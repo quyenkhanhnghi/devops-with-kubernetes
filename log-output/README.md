@@ -1,6 +1,6 @@
 # Log Output Application
 
-A timestamped log entries with a unique UUID every 5 seconds.
+Add an endpoint to request the current status (timestamp and the random string) and an Ingress so that you can access it with a browser.
 
 ## Quick Start
 
@@ -26,19 +26,19 @@ A timestamped log entries with a unique UUID every 5 seconds.
 
 1. Build the Docker image:
    ```bash
-   docker build -t log-output:latest .
+   docker build -t log-output-app:latest .
    ```
 2. Run the container:
    ```bash
-   docker run --rm log-output:latest
+   docker run --rm log-output-app:latest
    ```
 
 ### Deploy to Kubernetes (k3d)
 
 1. Build and import the image into your k3d cluster:
    ```bash
-   docker build -t log-output:latest .
-   k3d image import log-output:latest -c k3s-default
+   docker build -t log-output-app:latest .
+   k3d image import log-output-app:latest -c k3s-default
    ```
 2. Apply the Kubernetes manifest:
    ```bash
@@ -46,7 +46,8 @@ A timestamped log entries with a unique UUID every 5 seconds.
    ```
 3. View the logs:
    ```bash
-   kubectl get pods
-   kubectl logs -l app=log-output -f
+   kubectl get deployments
+   kubectl get pods -l app=log-output-app
+   kubectl logs -l app=log-output-app -f
    ```
 
