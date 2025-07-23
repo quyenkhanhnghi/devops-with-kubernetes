@@ -11,3 +11,4 @@
 - [1.5](https://github.com/quyenkhanhnghi/devops-with-kubernetes/releases/tag/1.5)
 - [1.6](https://github.com/quyenkhanhnghi/devops-with-kubernetes/releases/tag/1.6)
 - [1.7](https://github.com/quyenkhanhnghi/devops-with-kubernetes/releases/tag/1.7)
+- [1.8](https://github.com/quyenkhanhnghi/devops-with-kubernetes/releases/tag/1.8)
